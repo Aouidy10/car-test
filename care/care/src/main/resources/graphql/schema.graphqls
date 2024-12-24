@@ -1,0 +1,22 @@
+type Query {
+    getAllCars: [CarDTO]
+    getCarByModel(model: String): [CarDTO]
+}
+
+type Mutation {
+    saveCar(car: CarDTOInput): CarDTO
+}
+
+type CarDTO {
+    model: String
+    color: String
+    matricul: String
+    price: Float
+}
+
+input CarDTOInput {
+    model: String
+    color: String
+    matricul: String
+    price: Float
+}
